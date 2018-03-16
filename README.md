@@ -11,3 +11,4 @@
 ### &#9881; Tehnologiile utilizate:
 * Server TCP concurent cu N clienți
 * Multiplexare I/O via select()
+* Dicționar via <http://www.bistritza.ro/isc.html>
