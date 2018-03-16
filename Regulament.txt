@@ -1,0 +1,6 @@
+REGULAMENT:
+1.Primul jucător alege o literă, după care trimite un cuvânt ce începe cu litera respectivă.
+2.Următorul jucător va alege un cuvânt ce începe cu ultimele două litere din cuvântul jucătorului pr$
+3.Nu sunt acceptate substantive proprii sau la forma plural.
+4.Când un jucător este blocat, nu mai găseşte un cuvânt sau cuvantul trimis de acesta nu face parte $
+5.Ultimul jucător rămas în joc câştigă.
