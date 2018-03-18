@@ -1,4 +1,0 @@
-Comenzi: (ATENȚIE: toate încep cu  _ )
-_reguli  -> listă cu regulile jocului
-_comenzi -> lista cu comenzi
-_renunt  -> jucătorul se dă bătut și se deconectează de la server
