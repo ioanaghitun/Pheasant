@@ -23,7 +23,7 @@ int main (int argc, char *argv[])
 {
   int sd;                       // descriptorul de socket
   struct sockaddr_in server;    // structura folosita pentru conectare
-  char msg[1000];                // mesajul trimis
+  char msg[1000];               // mesajul trimis
 
   if(argc > 1)
   {
@@ -61,12 +61,12 @@ int main (int argc, char *argv[])
 
   if (strstr(msg, "Nu se mai acceptă alții") != NULL)
   {
-   printf ("%s\n", msg);
-   fflush(stdout);
-   bzero(msg,100);
-   MERGE=0;
-   close(sd);
-   return 0;
+    printf ("%s\n", msg);
+    fflush(stdout);
+    bzero(msg,100);
+    MERGE=0;
+    close(sd);
+    return 0;
   }
   else
   {
@@ -91,10 +91,10 @@ int main (int argc, char *argv[])
       while (1)
       {
         if (MERGE == 0)
-                {
-                  exit(0);
-                }
-                else
+        {
+          exit(0);
+        }
+        else
         {
           bzero (msg, 1000);
           read (0, msg, 1000);
@@ -108,10 +108,10 @@ int main (int argc, char *argv[])
           {
             printf("Ai renunțat.\n");
             fflush(stdout);
-                    exit(0);
+            exit(0);
           }
-            }
-      }               /* while */
+        }
+      }    /* while */
     }
     else
     {
@@ -122,26 +122,26 @@ int main (int argc, char *argv[])
           perror ("Eroare la read() de la server.\n");
           return errno;
         }
-                else if (strstr(msg, "_quit") != NULL)
-            {
-                  printf ("Ai pierdut.\n");
-                  fflush(stdout);
-                  MERGE=0;
-                  exit(0);
-            }
-                else
-                {
-            printf ("%s\n", msg);
-            fflush(stdout);
-                    if (strstr(msg, "Ai căștigat! Felicitări!") != NULL)
-                    {
-                      MERGE=0;
-                      exit(0);
-                    }
+        else if (strstr(msg, "_quit") != NULL)
+        {
+          printf ("Ai pierdut.\n");
+          fflush(stdout);
+          MERGE=0;
+          exit(0);
         }
-      }               /* while */
-    }                 /* else */
+        else
+        {
+          printf ("%s\n", msg);
+          fflush(stdout);
+          if (strstr(msg, "Ai căștigat! Felicitări!") != NULL)
+          {
+            MERGE=0;
+            exit(0);
+          }
+        }
+      }   /* while */
+    }     /* else */
     close(sd);
     return 0;
   }
-}                   /* main */
+}        /* main */
